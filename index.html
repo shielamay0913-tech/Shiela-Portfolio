@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -213,9 +214,13 @@ body.portfolio-open #home .art{animation:home-monitor-from-right .95s .12s cubic
 #contact.scroll-reveal .contact-card:nth-child(2){transition-delay:.12s}#contact.scroll-reveal .contact-card:nth-child(3){transition-delay:.24s}
 #contact.scroll-reveal.is-visible .contact-card{opacity:1;transform:translateX(0)}
 #contact.scroll-reveal.is-visible .contact-card:hover{transform:translateY(-4px)}
+@keyframes contact-logo-float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+#contact.scroll-reveal.is-visible .contact-logo{animation:contact-logo-float 2.8s ease-in-out infinite}
+#contact.scroll-reveal.is-visible .contact-card:nth-child(2) .contact-logo{animation-delay:.35s}
+#contact.scroll-reveal.is-visible .contact-card:nth-child(3) .contact-logo{animation-delay:.7s}
 @media(max-width:800px){.monitor-content{grid-template-columns:minmax(0,1.6fr) minmax(92px,.9fr);min-height:270px}.monitor-content img{height:250px}.contact-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.pc-monitor{width:min(420px,100%)}.monitor-content{grid-template-columns:minmax(0,1.55fr) minmax(88px,.85fr);min-height:240px}.monitor-content img{height:220px}.screen-side{opacity:.62}.contact-card{min-height:96px}}
-@media(prefers-reduced-motion:reduce){#contact.scroll-reveal .contact-card,#contact.scroll-reveal.is-visible .contact-card{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){#contact.scroll-reveal .contact-card,#contact.scroll-reveal.is-visible .contact-card{opacity:1;transform:none;transition:none}#contact.scroll-reveal.is-visible .contact-logo{animation:none}}
 </style>
 </head>
 <body>
